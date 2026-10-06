@@ -16,4 +16,4 @@ Serve this directory with any static HTTP server, then open `index.html` at the 
 
 ## Publishing
 
-Deploy the repository root as a static site. There is no build command and no output directory. Once the production domain is known, replace the note in `index.html` with a canonical URL and absolute social image URLs.
+Deploy the repository root as a static site. There is no build command and no output directory. The production URL in the page metadata is `https://tripylon.io/`.
