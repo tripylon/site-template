@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>TriPylon for Business — HSM modules and developer SDKs</title>
+  <meta name="description" content="TriPylon HSM modules for business applications, with SDKs for Node.js, Deno, Python and C on Windows and Unix-like systems, and support for EVM and Tron networks.">
+  <link rel="canonical" href="https://tripylon.io/business.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TriPylon">
+  <meta property="og:title" content="TriPylon for Business — HSM modules and SDKs">
+  <meta property="og:description" content="Hardware-backed modules and developer SDKs for EVM and Tron integrations.">
+  <meta property="og:url" content="https://tripylon.io/business.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TriPylon for Business — HSM modules and SDKs">
+  <meta name="twitter:description" content="Hardware-backed modules and developer SDKs for EVM and Tron integrations.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://tripylon.io/#organization","name":"TriPylon","url":"https://tripylon.io/","logo":"https://tripylon.io/assets/brand/logo.svg"},
+      {"@type":"WebPage","@id":"https://tripylon.io/business.html#webpage","url":"https://tripylon.io/business.html","name":"TriPylon for Business — HSM modules and developer SDKs","description":"TriPylon HSM modules with SDKs for Node.js, Deno, Python and C, supporting EVM and Tron integrations.","inLanguage":"en","publisher":{"@id":"https://tripylon.io/#organization"}}
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme:light; --ink:#111415; --paper:#f7f7f4; --white:#fff; --muted:#5d6464; --line:#dfe2df; --teal:#9ee2df; font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); }
+    a { color:inherit; text-decoration:none; }
+    img,svg { display:block; max-width:100%; }
+    :focus-visible { outline:3px solid #187c76; outline-offset:4px; }
+    .skip-link { position:absolute; z-index:30; top:-4rem; left:1rem; padding:.75rem 1rem; background:var(--ink); color:#fff; }
+    .skip-link:focus { top:1rem; }
+    .page { overflow:clip; }
+    .shell { width:min(100% - 72px,1380px); margin-inline:auto; }
+    .header { position:relative; z-index:10; border-bottom:1px solid var(--line); background:#fcfcfa; }
+    .header-inner { min-height:84px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:28px; }
+    .brand { display:inline-flex; align-items:center; gap:14px; width:fit-content; font-size:22px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; }
+    .brand img { width:43px; height:43px; object-fit:contain; }
+    .nav { display:flex; align-items:center; gap:clamp(22px,3vw,48px); }
+    .nav a,.personal-link { font-size:12px; font-weight:700; letter-spacing:.055em; text-transform:uppercase; white-space:nowrap; }
+    .nav a:hover,.personal-link:hover,.mobile-nav a:hover { color:#447b79; }
+    .header-actions { display:flex; align-items:center; justify-content:flex-end; gap:22px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1px solid var(--ink); border-radius:9px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; letter-spacing:.055em; text-transform:uppercase; white-space:nowrap; transition:background-color .2s ease,transform .2s ease; }
+    .button:hover { background:#303838; transform:translateY(-2px); }
+    .button--light { background:transparent; color:var(--ink); border-color:#cbd0cd; }
+    .button--light:hover { background:#fff; }
+    .button--small { min-height:42px; padding-inline:17px; }
+    .mobile-menu { display:none; }
+    .eyebrow { margin:0; color:#4b6d6b; font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; }
+    h1,h2,h3,p { overflow-wrap:break-word; }
+    h1,h2 { letter-spacing:-.03em; text-transform:uppercase; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.93fr); gap:clamp(34px,5vw,78px); align-items:center; min-height:610px; padding-block:54px 64px; }
+    .hero-copy { padding-left:30px; }
+    .hero .eyebrow { display:flex; align-items:center; gap:12px; }
+    .hero .eyebrow::before { content:""; width:20px; height:2px; background:#4eaaa5; }
+    h1 { max-width:710px; margin:28px 0 24px; font-size:clamp(46px,5.1vw,78px); line-height:1.02; font-weight:800; }
+    .hero-intro { max-width:52ch; margin:0; color:var(--muted); font-size:clamp(17px,1.4vw,20px); line-height:1.55; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .hero-note { display:flex; flex-wrap:wrap; gap:11px; align-items:center; margin-top:40px; color:#626a69; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    .hero-note span + span::before { content:"/"; margin-right:11px; color:#9da5a2; }
+    .system { position:relative; min-height:508px; overflow:hidden; padding:28px; border:1px solid #292f30; border-radius:22px; background:radial-gradient(circle at 70% 20%,#283a3a 0,#171d1e 45%,#101516 100%); color:#f4f8f7; box-shadow:0 30px 80px rgba(13,25,25,.14); }
+    .system::before { content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size:34px 34px; -webkit-mask-image:linear-gradient(to bottom,#000,transparent 90%); mask-image:linear-gradient(to bottom,#000,transparent 90%); pointer-events:none; }
+    .system-top { position:relative; display:flex; justify-content:space-between; gap:12px; color:#a6c2c0; font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .system-status { display:inline-flex; align-items:center; gap:7px; }
+    .system-status::before { content:""; width:7px; height:7px; border-radius:50%; background:#91d8b0; box-shadow:0 0 0 4px rgba(145,216,176,.13); }
+    .flow { position:relative; display:grid; gap:0; max-width:430px; margin:39px auto 0; }
+    .flow-box { position:relative; display:flex; justify-content:space-between; align-items:center; gap:14px; min-height:67px; padding:14px 19px; border:1px solid #455557; border-radius:11px; background:rgba(20,28,29,.92); }
+    .flow-box strong { font-size:15px; font-weight:700; letter-spacing:.015em; }
+    .flow-box small { color:#94aaa9; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; text-align:right; }
+    .flow-box--core { min-height:94px; border-color:#80c4c0; background:linear-gradient(130deg,#243b3b,#1a2829); box-shadow:0 0 0 6px rgba(144,213,210,.06); }
+    .flow-box--core strong { font-size:24px; letter-spacing:-.02em; }
+    .flow-box--core small { color:#b7e5e2; }
+    .flow-line { width:1px; height:25px; margin:auto; background:#79bbb6; }
+    .system-bottom { position:relative; display:flex; justify-content:space-between; gap:12px; margin-top:39px; padding-top:17px; border-top:1px solid #344143; color:#91a6a4; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .proof { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-block:1px solid var(--line); }
+    .proof-item { display:flex; align-items:center; gap:18px; min-height:94px; padding:18px 31px; }
+    .proof-item + .proof-item { border-left:1px solid var(--line); }
+    .proof-index { color:#67aaa5; font-size:12px; font-weight:700; }
+    .proof-item strong { font-size:14px; font-weight:700; }
+    .section { padding-block:105px; scroll-margin-top:25px; }
+    .section-lead { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.75fr); align-items:end; gap:40px; margin-bottom:36px; }
+    .section h2 { max-width:850px; margin:15px 0 0; font-size:clamp(39px,4.65vw,68px); line-height:1.03; }
+    .section-intro { max-width:55ch; margin:0; color:var(--muted); font-size:17px; line-height:1.58; }
+    .capabilities { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
+    .capability { min-height:226px; padding:27px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+    .capability-number { display:inline-block; margin-bottom:36px; color:#5eaaa5; font-size:12px; font-weight:700; letter-spacing:.15em; }
+    .capability h3 { margin:0 0 12px; font-size:21px; line-height:1.2; letter-spacing:-.01em; }
+    .capability p { max-width:38ch; margin:0; color:var(--muted); font-size:14px; line-height:1.58; }
+    .sdk { padding:clamp(34px,5vw,68px); border-radius:24px; background:#161b1c; color:#f4f6f4; }
+    .sdk .eyebrow { color:#99dad6; }
+    .sdk .section-intro { color:#b0bdbc; }
+    .sdk-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:34px; }
+    .sdk-card { min-height:156px; padding:22px; border:1px solid #3d4849; border-radius:13px; background:#202728; }
+    .sdk-card small { display:block; margin-bottom:35px; color:#98afae; font-size:10px; font-weight:700; letter-spacing:.16em; }
+    .sdk-card strong { display:block; font-size:clamp(21px,2.2vw,31px); letter-spacing:-.025em; }
+    .platforms { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:28px; color:#9caaaa; font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .platforms span { padding:9px 13px; border:1px solid #495455; border-radius:999px; color:#d5e2e0; letter-spacing:.055em; }
+    .networks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .network { position:relative; min-height:277px; overflow:hidden; padding:32px; border:1px solid var(--line); border-radius:17px; background:#fff; }
+    .network::after { content:""; position:absolute; right:-52px; bottom:-92px; width:235px; height:235px; border:1px solid #dce9e6; border-radius:50%; box-shadow:0 0 0 36px #f7fbfa,0 0 0 37px #e5efec; }
+    .network small { position:relative; z-index:1; color:#5a9290; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .network h3 { position:relative; z-index:1; margin:55px 0 12px; font-size:clamp(30px,3vw,43px); line-height:1.1; letter-spacing:-.025em; }
+    .network p { position:relative; z-index:1; max-width:37ch; margin:0; color:var(--muted); font-size:15px; line-height:1.55; }
+    .close { display:grid; grid-template-columns:1fr auto; align-items:center; gap:28px; margin-bottom:80px; padding:40px 45px; border-radius:18px; background:#e9f0ed; }
+    .close h2 { max-width:760px; margin:0 0 12px; font-size:clamp(34px,3.6vw,51px); line-height:1.07; letter-spacing:-.03em; text-transform:uppercase; }
+    .close p { max-width:62ch; margin:0; color:#52615e; font-size:15px; line-height:1.55; }
+    .close-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer { background:#151515; color:#f8f7f5; }
+    .footer-main { display:grid; grid-template-columns:minmax(240px,1.6fr) repeat(3,minmax(130px,1fr)); gap:clamp(22px,3.5vw,60px); padding:50px 30px 44px; }
+    .footer-brand { display:inline-flex; align-items:center; gap:14px; font-size:24px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; white-space:nowrap; }
+    .footer-brand img { width:54px; height:54px; }
+    .footer-tagline { margin:18px 0 0; color:#a7a7a7; font-size:12px; line-height:1.6; letter-spacing:.13em; text-transform:uppercase; }
+    .footer-group { display:flex; flex-direction:column; align-items:flex-start; gap:13px; padding-left:clamp(16px,2.5vw,35px); border-left:1px solid #343434; }
+    .footer-group h2 { margin:4px 0 7px; color:#a7a7a7; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .footer-group a { color:#ebebeb; font-size:14px; line-height:1.4; }
+    .footer-group a:hover,.footer-bottom a:hover { color:#a9e3e5; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:23px 30px 28px; border-top:1px solid #333; color:#a7a7a7; font-size:11px; letter-spacing:.09em; text-transform:uppercase; }
+    .footer-bottom-links { display:flex; align-items:center; gap:26px; }
+    .footer-bottom a { color:#e5e5e5; }
+    @media (max-width:1100px) {
+      .shell { width:min(100% - 48px,1380px); }
+      .header-inner { gap:18px; } .brand { font-size:19px; } .nav { gap:20px; } .header-actions { gap:13px; }
+      .hero-copy { padding-left:8px; } .system { min-height:490px; } .proof-item { padding-inline:18px; }
+    }
+    @media (max-width:820px) {
+      .header-inner { min-height:72px; display:flex; justify-content:space-between; }
+      .nav,.personal-link { display:none; }
+      .mobile-menu { position:relative; display:block; }
+      .mobile-menu summary { display:grid; place-items:center; width:42px; height:42px; cursor:pointer; list-style:none; border:1px solid var(--line); border-radius:9px; }
+      .mobile-menu summary::-webkit-details-marker { display:none; }
+      .mobile-menu summary svg { width:22px; height:22px; }
+      .mobile-nav { position:absolute; top:calc(100% + 12px); right:0; display:grid; gap:2px; width:min(260px,calc(100vw - 32px)); padding:10px; border:1px solid var(--line); border-radius:12px; background:#fff; box-shadow:0 12px 36px rgba(0,0,0,.09); }
+      .mobile-nav a { padding:13px 12px; font-size:13px; font-weight:700; text-transform:uppercase; }
+      .hero { grid-template-columns:1fr; gap:38px; padding-block:50px 62px; } .hero-copy { padding-left:0; } .hero-intro { max-width:62ch; }
+      .system { min-height:0; } .proof { grid-template-columns:1fr; } .proof-item { min-height:68px; padding:15px 12px; } .proof-item + .proof-item { border-left:0; border-top:1px solid var(--line); }
+      .section { padding-block:75px; } .section-lead { display:block; } .section-intro { margin-top:20px; }
+      .capabilities { grid-template-columns:1fr 1fr; } .capability:last-child { grid-column:1 / -1; }
+      .sdk-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .close { grid-template-columns:1fr; }
+      .footer-main { grid-template-columns:repeat(3,minmax(0,1fr)); padding-inline:8px; } .footer-brand-block { grid-column:1 / -1; padding-bottom:20px; }
+      .footer-bottom { padding-inline:8px; }
+    }
+    @media (max-width:620px) {
+      .shell { width:min(100% - 32px,1380px); } .brand { gap:9px; font-size:17px; letter-spacing:.12em; } .brand img { width:34px; height:34px; }
+      .header-actions > .button { display:none; }
+      .hero { gap:28px; padding-block:46px 48px; } h1 { margin:20px 0; font-size:clamp(42px,11vw,62px); }
+      .hero-intro { font-size:16px; } .hero-actions { gap:9px; margin-top:25px; } .hero-actions .button { min-height:46px; padding-inline:15px; font-size:11px; }
+      .hero-note { margin-top:25px; font-size:10px; } .system { padding:19px; border-radius:16px; }
+      .system-top,.system-bottom { font-size:8px; } .flow { margin-top:30px; } .flow-box { min-height:62px; padding:12px; }
+      .flow-box strong { font-size:13px; } .flow-box small { font-size:8px; } .flow-box--core { min-height:80px; } .flow-box--core strong { font-size:20px; }
+      .system-bottom { margin-top:28px; } .section { padding-block:58px; } .section h2 { font-size:clamp(37px,10vw,55px); }
+      .section-intro { font-size:15px; } .capabilities,.networks { grid-template-columns:1fr; gap:11px; } .capability:last-child { grid-column:auto; }
+      .capability { min-height:0; padding:23px; } .capability-number { margin-bottom:22px; }
+      .sdk { padding:29px 21px; border-radius:17px; } .sdk-grid { gap:9px; margin-top:26px; } .sdk-card { min-height:118px; padding:16px; }
+      .sdk-card small { margin-bottom:25px; } .sdk-card strong { font-size:23px; } .platforms { margin-top:25px; }
+      .network { min-height:229px; padding:25px; } .network h3 { margin-top:42px; } .network p { font-size:14px; }
+      .close { gap:25px; margin-bottom:55px; padding:28px 22px; } .close h2 { font-size:38px; } .close-actions .button { width:100%; }
+      .footer-main { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 12px; padding:38px 0; }
+      .footer-brand-block { padding:0 0 9px; } .footer-brand { font-size:20px; } .footer-brand img { width:45px; height:45px; } .footer-tagline { margin-top:13px; font-size:11px; }
+      .footer-group { min-height:120px; padding-left:14px; } .footer-group h2 { font-size:10px; } .footer-group a { font-size:13px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:16px; padding:20px 0 28px; font-size:10px; }
+    }
+    @media (max-width:370px) { .header-actions > .button { display:none; } .hero-actions .button { width:100%; } .flow-box small { max-width:80px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page" id="top">
+    <header class="header">
+      <div class="header-inner shell">
+        <a class="brand" href="index.html" aria-label="TriPylon home">
+          <img src="assets/brand/logo.svg" width="43" height="43" alt="" aria-hidden="true">
+          <span>TriPylon</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#platform">Platform</a><a href="#sdk">SDKs</a><a href="#networks">Networks</a>
+        </nav>
+        <div class="header-actions">
+          <a class="personal-link" href="index.html">Personal wallet ↗</a>
+          <a class="button button--small" href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">Explore GitHub</a>
+          <details class="mobile-menu">
+            <summary aria-label="Open navigation menu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary>
+            <nav class="mobile-nav" aria-label="Mobile navigation"><a href="#platform">Platform</a><a href="#sdk">SDKs</a><a href="#networks">Networks</a><a href="index.html">Personal wallet</a><a href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="shell">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">TriPylon for business</p>
+            <h1 id="hero-title">Secure hardware.<br>Built for your stack.</h1>
+            <p class="hero-intro">TriPylon also builds HSM modules for teams working with digital assets. Developer SDKs connect business applications to the hardware across multiple languages and operating systems.</p>
+            <div class="hero-actions">
+              <a class="button" href="#platform">Explore the platform</a>
+              <a class="button button--light" href="#sdk">See SDK coverage</a>
+            </div>
+            <div class="hero-note" aria-label="Platform highlights"><span>HSM modules</span><span>Developer SDKs</span><span>EVM + Tron</span></div>
+          </div>
+          <div class="system" aria-label="TriPylon integration overview">
+            <div class="system-top"><span>TRIPYLON / BUSINESS</span><span class="system-status">Architecture overview</span></div>
+            <div class="flow">
+              <div class="flow-box"><strong>Your application</strong><small>Business systems</small></div>
+              <div class="flow-line" aria-hidden="true"></div>
+              <div class="flow-box"><strong>TriPylon SDK</strong><small>Node.js · Deno · Python · C</small></div>
+              <div class="flow-line" aria-hidden="true"></div>
+              <div class="flow-box flow-box--core"><strong>TriPylon HSM</strong><small>Hardware module</small></div>
+              <div class="flow-line" aria-hidden="true"></div>
+              <div class="flow-box"><strong>Supported networks</strong><small>EVM · Tron</small></div>
+            </div>
+            <div class="system-bottom"><span>Hardware + software</span><span>One integration path</span></div>
+          </div>
+        </section>
+        <div class="proof" aria-label="Business platform overview">
+          <div class="proof-item"><span class="proof-index">01</span><strong>Dedicated HSM modules</strong></div>
+          <div class="proof-item"><span class="proof-index">02</span><strong>SDKs for four languages</strong></div>
+          <div class="proof-item"><span class="proof-index">03</span><strong>EVM and Tron support</strong></div>
+        </div>
+        <section class="section" id="platform" aria-labelledby="platform-title">
+          <div class="section-lead">
+            <div><p class="eyebrow">The platform</p><h2 id="platform-title">A dedicated layer for key operations.</h2></div>
+            <p class="section-intro">TriPylon HSM modules bring a hardware component into digital-asset workflows. The SDK provides the connection between that module and the applications your team already builds.</p>
+          </div>
+          <div class="capabilities">
+            <article class="capability"><span class="capability-number">01 / HARDWARE</span><h3>Purpose-built modules</h3><p>Hardware security modules designed as a distinct component of your integration architecture.</p></article>
+            <article class="capability"><span class="capability-number">02 / SOFTWARE</span><h3>Developer-facing SDKs</h3><p>Work from your existing runtime and integrate the module without changing the rest of your stack.</p></article>
+            <article class="capability"><span class="capability-number">03 / NETWORKS</span><h3>Blockchain workflows</h3><p>Build integrations for EVM-compatible and Tron networks through the TriPylon platform.</p></article>
+          </div>
+        </section>
+        <section class="sdk section" id="sdk" aria-labelledby="sdk-title">
+          <div class="section-lead">
+            <div><p class="eyebrow">Developer integration</p><h2 id="sdk-title">An SDK for the language you use.</h2></div>
+            <p class="section-intro">TriPylon SDK coverage spans server-side JavaScript, Python and C, so teams can connect HSM modules from familiar development environments.</p>
+          </div>
+          <div class="sdk-grid" aria-label="Supported SDK languages">
+            <div class="sdk-card"><small>01 / JAVASCRIPT</small><strong>Node.js</strong></div>
+            <div class="sdk-card"><small>02 / JAVASCRIPT</small><strong>Deno</strong></div>
+            <div class="sdk-card"><small>03 / PYTHON</small><strong>Python</strong></div>
+            <div class="sdk-card"><small>04 / NATIVE</small><strong>C</strong></div>
+          </div>
+          <div class="platforms">Operating systems <span>Windows</span><span>Unix-like</span></div>
+        </section>
+        <section class="section" id="networks" aria-labelledby="networks-title">
+          <div class="section-lead">
+            <div><p class="eyebrow">Network coverage</p><h2 id="networks-title">Ready for the chains in your workflow.</h2></div>
+            <p class="section-intro">The business platform is designed for applications working with EVM-compatible networks and Tron.</p>
+          </div>
+          <div class="networks">
+            <article class="network"><small>Network family / 01</small><h3>EVM networks</h3><p>Connect TriPylon HSM modules to applications built around EVM-compatible blockchain workflows.</p></article>
+            <article class="network"><small>Network / 02</small><h3>Tron</h3><p>Extend the same hardware-and-SDK approach to applications operating on the Tron network.</p></article>
+          </div>
+        </section>
+        <section class="close" aria-labelledby="close-title">
+          <div><h2 id="close-title">Build with a stronger hardware boundary.</h2><p>Follow TriPylon's public development on GitHub or return to TriPylon Touch for the personal wallet experience.</p></div>
+          <div class="close-actions"><a class="button" href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">Explore GitHub</a><a class="button button--light" href="index.html">TriPylon Touch</a></div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="shell">
+        <div class="footer-main">
+          <div class="footer-brand-block"><a class="footer-brand" href="index.html" aria-label="TriPylon home"><img src="assets/brand/logo-white.svg" width="54" height="54" alt="" aria-hidden="true" loading="lazy"><span>TriPylon</span></a><p class="footer-tagline">True offline security.<br>For a more open world.</p></div>
+          <nav class="footer-group" aria-label="Products"><h2>Product</h2><a href="index.html">TriPylon Touch</a><a href="business.html" aria-current="page">For business</a></nav>
+          <nav class="footer-group" aria-label="Technology"><h2>Technology</h2><a href="#platform">HSM modules</a><a href="#sdk">SDKs</a><a href="#networks">Networks</a></nav>
+          <nav class="footer-group" aria-label="Resources"><h2>Resources</h2><a href="https://github.com/tripylon/tripylon-device-js" target="_blank" rel="noopener noreferrer">JS device reference ↗</a><a href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+        </div>
+        <div class="footer-bottom"><span>© 2026 TriPylon. All rights reserved.</span><div class="footer-bottom-links"><a href="index.html">Personal wallet ↗</a><span aria-label="Page language: English">EN</span></div></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

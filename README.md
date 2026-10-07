@@ -4,8 +4,10 @@ Static, responsive one-page website for TriPylon Touch. The page is self-contain
 
 ## Files
 
-- `index.html` — page markup, metadata, structured data, and styles
+- `index.html` — TriPylon Touch landing page
+- `business.html` — business HSM and SDK page
 - `site.webmanifest` and `favicon.ico` — browser metadata
+- `robots.txt` and `sitemap.xml` — search crawler guidance
 - `assets/brand/` — current TriPylon logo variants
 - `assets/icons/` — browser and device icons
 - `assets/images/` — optimized page imagery
