@@ -7,6 +7,7 @@ Static, responsive website for TriPylon Touch and business offerings. Each HTML 
 - `index.html` — TriPylon Touch landing page
 - `business.html` — business HSM and SDK page
 - `whitelabel.html` — White Label hardware wallet page
+- `nucleo.html` — Nucleo OS architecture page
 - `site.webmanifest` and `favicon.ico` — browser metadata
 - `robots.txt` and `sitemap.xml` — search crawler guidance
 - `assets/brand/` — current TriPylon logo variants

@@ -30,9 +30,9 @@
     "@context": "https://schema.org",
     "@graph": [
       {"@type":"Organization","@id":"https://tripylon.io/#organization","name":"TriPylon","url":"https://tripylon.io/","logo":"https://tripylon.io/assets/brand/logo.svg"},
-      {"@type":"WebPage","@id":"https://tripylon.io/#webpage","url":"https://tripylon.io/","name":"TriPylon Touch — Security made simple","description":"TriPylon Touch hardware wallet, Nucleo OS, and first-generation hardware architecture.","inLanguage":"en","about":[{"@id":"https://tripylon.io/#product"},{"@id":"https://tripylon.io/#nucleo-os"}],"publisher":{"@id":"https://tripylon.io/#organization"}},
+      {"@type":"WebPage","@id":"https://tripylon.io/#webpage","url":"https://tripylon.io/","name":"TriPylon Touch — Security made simple","description":"TriPylon Touch hardware wallet, Nucleo OS, and first-generation hardware architecture.","inLanguage":"en","about":[{"@id":"https://tripylon.io/#product"},{"@id":"https://tripylon.io/nucleo#software"}],"publisher":{"@id":"https://tripylon.io/#organization"}},
       {"@type":"Product","@id":"https://tripylon.io/#product","name":"TriPylon Touch","brand":{"@id":"https://tripylon.io/#organization"},"category":"Hardware wallet","description":"A compact hardware wallet designed to keep crypto keys offline. Its first-generation architecture includes secure boot, encrypted storage, and USB HID connectivity.","image":"https://tripylon.io/assets/images/hero-device.webp"},
-      {"@type":"SoftwareApplication","@id":"https://tripylon.io/#nucleo-os","name":"TriPylon Nucleo","applicationCategory":"OperatingSystem","description":"A modular, single-tasking operating system for TriPylon hardware wallets."}
+      {"@type":"SoftwareApplication","@id":"https://tripylon.io/nucleo#software","name":"TriPylon Nucleo OS","url":"https://tripylon.io/nucleo","applicationCategory":"OperatingSystem","description":"A modular, single-tasking operating system for TriPylon hardware wallets."}
     ]
   }
   </script>
@@ -42,6 +42,7 @@
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); }
     a { color:inherit; text-decoration:none; }
+    .os-link { text-decoration-line:underline; text-decoration-style:dashed; text-decoration-thickness:1px; text-underline-offset:.18em; }
     button { font:inherit; }
     img,svg { display:block; max-width:100%; }
     :focus-visible { outline:3px solid #19735c; outline-offset:4px; }
@@ -290,8 +291,8 @@
           <div class="nucleo-layout">
             <div class="detail-head">
               <p class="detail-kicker">The operating system</p>
-              <h2 id="nucleo-title">Meet TriPylon Nucleo.</h2>
-              <p class="detail-intro">A specialized, single-tasking operating system at the heart of TriPylon wallets. Its modular C++ architecture separates communication, cryptography, applications, blockchain logic and storage into focused components.</p>
+              <h2 id="nucleo-title">Meet TriPylon <a class="os-link" href="nucleo.html">Nucleo.</a></h2>
+              <p class="detail-intro"><a class="os-link" href="nucleo.html">Nucleo OS</a> is a specialized, single-tasking operating system at the heart of TriPylon wallets. Its modular C++ architecture separates communication, cryptography, applications, blockchain logic and storage into focused components.</p>
               <span class="nucleo-stamp">Built to evolve</span>
             </div>
             <div class="kernel-list" aria-label="Nucleo architecture">
@@ -312,7 +313,7 @@
               <p class="detail-kicker">First-generation hardware</p>
               <h2 id="touch-title">TriPylon Touch.<br>Built in layers.</h2>
             </div>
-            <p class="detail-intro">The first TriPylon Touch combines hardware safeguards with Nucleo's software architecture. These hardware details describe the first generation; future devices may use a different configuration.</p>
+            <p class="detail-intro">The first TriPylon Touch combines hardware safeguards with <a class="os-link" href="nucleo.html">Nucleo's</a> software architecture. These hardware details describe the first generation; future devices may use a different configuration.</p>
           </div>
           <div class="hardware-list">
             <article class="hardware-item"><h3>Verified startup</h3><p>Secure Boot is designed to run only signed firmware on the device.</p></article>
@@ -320,7 +321,7 @@
             <article class="hardware-item"><h3>Locked debug access</h3><p>One-time hardware settings can permanently disable debugging interfaces.</p></article>
             <article class="hardware-item"><h3>Fast cryptography</h3><p>Hardware acceleration supports common cryptographic operations.</p></article>
             <article class="hardware-item"><h3>Browser connection</h3><p>USB HID enables direct browser interaction through WebHID.</p></article>
-            <article class="hardware-item"><h3>Room to grow</h3><p>Processing and memory capacity provide headroom for Nucleo's VM and richer future interfaces.</p></article>
+            <article class="hardware-item"><h3>Room to grow</h3><p>Processing and memory capacity provide headroom for <a class="os-link" href="nucleo.html">Nucleo's</a> VM and richer future interfaces.</p></article>
           </div>
           <p class="hardware-note">Wireless capabilities and graphical interfaces discussed in the architecture roadmap are not presented here as features of the current Touch hardware.</p>
         </section>
@@ -376,7 +377,7 @@
           </nav>
           <nav class="footer-group" aria-label="Technology">
             <h2>Technology</h2>
-            <a href="#nucleo">Nucleo OS</a>
+            <a class="os-link" href="nucleo.html">Nucleo OS</a>
             <a href="#software">Open by design</a>
             <a href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </nav>
