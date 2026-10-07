@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>TriPylon White Label — hardware wallets for your brand</title>
+  <meta name="description" content="Create a branded hardware wallet with a custom enclosure and tailored wallet app, built on TriPylon's Nucleo OS and security architecture with a unique hardware authenticity key.">
+  <link rel="canonical" href="https://tripylon.io/whitelabel">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TriPylon">
+  <meta property="og:title" content="TriPylon White Label — your brand, our security foundation">
+  <meta property="og:description" content="Custom hardware wallet enclosures and tailored app experiences, powered by Nucleo OS and TriPylon's security architecture.">
+  <meta property="og:url" content="https://tripylon.io/whitelabel">
+  <meta property="og:image" content="https://tripylon.io/assets/images/whitelabel-graphite.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TriPylon White Label — your brand, our security foundation">
+  <meta name="twitter:description" content="Custom hardware wallet enclosures and tailored app experiences, powered by Nucleo OS and TriPylon's security architecture.">
+  <meta name="twitter:image" content="https://tripylon.io/assets/images/whitelabel-graphite.webp">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://tripylon.io/#organization","name":"TriPylon","url":"https://tripylon.io/","logo":"https://tripylon.io/assets/brand/logo.svg"},
+      {"@type":"WebPage","@id":"https://tripylon.io/whitelabel#webpage","url":"https://tripylon.io/whitelabel","name":"TriPylon White Label — hardware wallets for your brand","description":"Custom hardware wallet enclosures and tailored wallet applications built on Nucleo OS and TriPylon's security architecture.","inLanguage":"en","publisher":{"@id":"https://tripylon.io/#organization"}}
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme:light; --ink:#111415; --paper:#f7f7f4; --muted:#5d6464; --line:#dfe2df; --teal:#9ee2df; font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); }
+    a { color:inherit; text-decoration:none; }
+    img,svg { display:block; max-width:100%; }
+    :focus-visible { outline:3px solid #187c76; outline-offset:4px; }
+    .skip-link { position:absolute; z-index:30; top:-4rem; left:1rem; padding:.75rem 1rem; background:var(--ink); color:#fff; }
+    .skip-link:focus { top:1rem; }
+    .page { overflow:clip; }
+    .shell { width:min(100% - 72px,1380px); margin-inline:auto; }
+    .header { position:relative; z-index:10; border-bottom:1px solid var(--line); background:#fcfcfa; }
+    .header-inner { min-height:84px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .brand { display:inline-flex; align-items:center; gap:14px; width:fit-content; font-size:22px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; }
+    .brand img { width:43px; height:43px; object-fit:contain; }
+    .nav { display:flex; align-items:center; gap:clamp(22px,3vw,45px); margin-left:auto; }
+    .nav a { font-size:12px; font-weight:700; letter-spacing:.055em; text-transform:uppercase; white-space:nowrap; }
+    .nav a:hover,.mobile-nav a:hover { color:#447b79; }
+    .nav a[aria-current] { color:#447b79; }
+    .header-actions { display:flex; align-items:center; gap:14px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1px solid var(--ink); border-radius:9px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; letter-spacing:.055em; text-transform:uppercase; white-space:nowrap; transition:background-color .2s ease,transform .2s ease; }
+    .button:hover { background:#303838; transform:translateY(-2px); }
+    .button--light { background:transparent; color:var(--ink); border-color:#cbd0cd; }
+    .button--light:hover { background:#fff; }
+    .button--small { min-height:42px; padding-inline:17px; }
+    .mobile-menu { display:none; }
+    .eyebrow { margin:0; color:#4b6d6b; font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; }
+    h1,h2,h3,p { overflow-wrap:break-word; }
+    h1,h2 { letter-spacing:-.025em; text-transform:uppercase; }
+    .hero { display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr); align-items:center; gap:clamp(30px,4vw,70px); padding-block:65px 85px; }
+    .hero-copy { padding-left:30px; }
+    .hero h1 { max-width:700px; margin:25px 0 25px; font-size:clamp(48px,5.2vw,78px); line-height:1.02; }
+    .hero-intro { max-width:51ch; margin:0; color:var(--muted); font-size:clamp(17px,1.4vw,20px); line-height:1.6; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:11px; margin-top:31px; }
+    .hero-note { margin:33px 0 0; color:#6a7370; font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .hero-visual { position:relative; overflow:hidden; border:1px solid #e0ded9; border-radius:22px; background:#e9e2d8; }
+    .hero-visual img { width:100%; height:clamp(420px,43vw,610px); object-fit:cover; }
+    .hero-visual-label { position:absolute; right:17px; bottom:17px; padding:11px 14px; border:1px solid rgba(255,255,255,.8); border-radius:999px; background:rgba(255,255,255,.8); color:#3a4140; font-size:10px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; backdrop-filter:blur(8px); }
+    .strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-block:1px solid var(--line); }
+    .strip-item { display:flex; gap:17px; align-items:center; min-height:90px; padding:18px 26px; }
+    .strip-item + .strip-item { border-left:1px solid var(--line); }
+    .strip-item span { color:#67aaa5; font-size:12px; font-weight:700; }
+    .strip-item strong { font-size:14px; }
+    .section { padding-block:102px; scroll-margin-top:24px; }
+    .section-lead { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.75fr); align-items:end; gap:40px; margin-bottom:36px; }
+    .section h2 { max-width:900px; margin:15px 0 0; font-size:clamp(39px,4.6vw,68px); line-height:1.04; }
+    .section-intro { max-width:53ch; margin:0; color:var(--muted); font-size:17px; line-height:1.58; }
+    .designs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
+    .design { overflow:hidden; border:1px solid var(--line); border-radius:17px; background:#fff; }
+    .design-image { overflow:hidden; background:#ebe5dd; }
+    .design-image img { width:100%; height:auto; }
+    .design-copy { padding:23px 25px 26px; }
+    .design-copy small { display:block; margin-bottom:12px; color:#548b87; font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .design-copy h3 { margin:0 0 9px; font-size:24px; letter-spacing:-.01em; }
+    .design-copy p { margin:0; color:var(--muted); font-size:14px; line-height:1.55; }
+    .concept-note { margin:17px 0 0; color:#6a7370; font-size:12px; line-height:1.5; }
+    .custom { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.95fr); gap:18px; }
+    .custom-panel { min-height:458px; padding:clamp(27px,3.5vw,48px); border:1px solid var(--line); border-radius:20px; background:#fff; }
+    .custom-panel--app { display:flex; align-items:center; justify-content:center; overflow:hidden; background:#e8efec; }
+    .custom-panel h3 { max-width:470px; margin:35px 0 17px; font-size:clamp(29px,3vw,43px); line-height:1.1; letter-spacing:-.025em; }
+    .custom-panel p:not(.eyebrow) { max-width:48ch; margin:0; color:var(--muted); font-size:16px; line-height:1.65; }
+    .custom-list { display:grid; gap:0; margin:38px 0 0; padding:0; list-style:none; }
+    .custom-list li { display:flex; align-items:center; gap:13px; padding:13px 0; border-top:1px solid var(--line); font-size:14px; font-weight:700; }
+    .custom-list li::before { content:""; width:8px; height:8px; flex:none; border-radius:50%; background:#69b6a5; }
+    .app-frame { width:min(100%,340px); padding:14px; border:8px solid #202727; border-radius:33px; background:#fdfdfb; box-shadow:0 29px 60px rgba(24,46,44,.18); transform:rotate(-4deg); }
+    .app-top { display:flex; justify-content:space-between; align-items:center; padding:12px 10px 30px; color:#283532; font-size:12px; font-weight:700; }
+    .app-mark { display:inline-flex; align-items:center; gap:9px; }
+    .app-mark::before { content:""; width:22px; height:22px; border-radius:7px; background:#6cb8ad; }
+    .app-balance { padding:20px; border-radius:16px; background:#142c29; color:#fff; }
+    .app-balance small { color:#b6d3cd; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+    .app-balance strong { display:block; margin-top:22px; font-size:25px; letter-spacing:-.025em; }
+    .app-actions { display:flex; gap:8px; margin:13px 0 23px; }
+    .app-actions span { flex:1; padding:12px 4px; border-radius:9px; background:#e9f2ef; color:#27514c; font-size:10px; font-weight:700; text-align:center; }
+    .app-row { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 3px; border-top:1px solid #e2e8e5; color:#293633; font-size:11px; font-weight:700; }
+    .app-row::after { content:""; width:34px; height:8px; border-radius:9px; background:#d1ded9; }
+    .foundation { padding:clamp(35px,5vw,70px); border-radius:24px; background:#172020; color:#f8faf8; }
+    .foundation .eyebrow { color:#9ee2df; }
+    .foundation .section-intro { color:#b4c4c0; }
+    .foundation-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:11px; margin-top:34px; }
+    .foundation-card { min-height:245px; padding:26px; border:1px solid #3a4948; border-radius:14px; background:#202b2a; }
+    .foundation-card span { color:#a1dbd6; font-size:11px; font-weight:700; letter-spacing:.15em; }
+    .foundation-card h3 { margin:47px 0 11px; font-size:23px; letter-spacing:-.01em; }
+    .foundation-card p { margin:0; color:#bac9c5; font-size:14px; line-height:1.58; }
+    .close { display:grid; grid-template-columns:1fr auto; align-items:center; gap:28px; margin-block:90px 80px; padding:40px 45px; border-radius:18px; background:#e9f0ed; }
+    .close h2 { max-width:720px; margin:0 0 12px; font-size:clamp(34px,3.6vw,51px); line-height:1.07; text-transform:uppercase; }
+    .close p { max-width:61ch; margin:0; color:#52615e; font-size:15px; line-height:1.55; }
+    .close-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer { background:#151515; color:#f8f7f5; }
+    .footer-main { display:grid; grid-template-columns:minmax(240px,1.6fr) repeat(3,minmax(130px,1fr)); gap:clamp(22px,3.5vw,60px); padding:50px 30px 44px; }
+    .footer-brand { display:inline-flex; align-items:center; gap:14px; font-size:24px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; white-space:nowrap; }
+    .footer-brand img { width:54px; height:54px; }
+    .footer-tagline { margin:18px 0 0; color:#a7a7a7; font-size:12px; line-height:1.6; letter-spacing:.13em; text-transform:uppercase; }
+    .footer-group { display:flex; flex-direction:column; align-items:flex-start; gap:13px; padding-left:clamp(16px,2.5vw,35px); border-left:1px solid #343434; }
+    .footer-group h2 { margin:4px 0 7px; color:#a7a7a7; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .footer-group a { color:#ebebeb; font-size:14px; line-height:1.4; }
+    .footer-group a:hover,.footer-bottom a:hover { color:#a9e3e5; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:23px 30px 28px; border-top:1px solid #333; color:#a7a7a7; font-size:11px; letter-spacing:.09em; text-transform:uppercase; }
+    .footer-bottom-links { display:flex; align-items:center; gap:26px; }
+    .footer-bottom a { color:#e5e5e5; }
+    @media (max-width:1100px) {
+      .shell { width:min(100% - 48px,1380px); }
+      .header-inner { gap:18px; } .nav { gap:20px; } .hero-copy { padding-left:8px; }
+      .strip-item { padding-inline:18px; }
+    }
+    @media (max-width:820px) {
+      .header-inner { min-height:72px; } .nav,.header-actions > .button { display:none; }
+      .mobile-menu { position:relative; display:block; }
+      .mobile-menu summary { display:grid; place-items:center; width:42px; height:42px; cursor:pointer; list-style:none; border:1px solid var(--line); border-radius:9px; }
+      .mobile-menu summary::-webkit-details-marker { display:none; }
+      .mobile-menu summary svg { width:22px; height:22px; }
+      .mobile-nav { position:absolute; top:calc(100% + 12px); right:0; display:grid; gap:2px; width:min(260px,calc(100vw - 32px)); padding:10px; border:1px solid var(--line); border-radius:12px; background:#fff; box-shadow:0 12px 36px rgba(0,0,0,.09); }
+      .mobile-nav a { padding:13px 12px; font-size:13px; font-weight:700; text-transform:uppercase; }
+      .hero { grid-template-columns:1fr; gap:36px; padding-block:50px 60px; } .hero-copy { padding-left:0; } .hero-visual img { height:min(70vw,530px); }
+      .strip { grid-template-columns:1fr; } .strip-item { min-height:67px; padding:14px 12px; } .strip-item + .strip-item { border-left:0; border-top:1px solid var(--line); }
+      .section { padding-block:75px; } .section-lead { display:block; } .section-intro { margin-top:20px; }
+      .designs { grid-template-columns:repeat(2,minmax(0,1fr)); } .design:last-child { grid-column:1/-1; }
+      .custom { grid-template-columns:1fr; } .custom-panel { min-height:0; } .custom-panel--app { min-height:440px; }
+      .foundation-grid { grid-template-columns:1fr; } .foundation-card { min-height:0; } .foundation-card h3 { margin-top:28px; }
+      .close { grid-template-columns:1fr; }
+      .footer-main { grid-template-columns:repeat(3,minmax(0,1fr)); padding-inline:8px; } .footer-brand-block { grid-column:1/-1; padding-bottom:20px; }
+      .footer-bottom { padding-inline:8px; }
+    }
+    @media (max-width:620px) {
+      .shell { width:min(100% - 32px,1380px); } .brand { gap:9px; font-size:17px; letter-spacing:.12em; } .brand img { width:34px; height:34px; }
+      .hero { gap:24px; padding-block:46px 50px; } .hero h1 { font-size:clamp(42px,11vw,62px); } .hero-intro { font-size:16px; }
+      .hero-actions .button { min-height:46px; padding-inline:16px; font-size:11px; } .hero-note { margin-top:25px; }
+      .hero-visual { border-radius:16px; } .hero-visual img { height:65vw; min-height:270px; } .hero-visual-label { right:10px; bottom:10px; padding:9px 11px; font-size:8px; }
+      .section { padding-block:58px; } .section h2 { font-size:clamp(37px,10vw,55px); } .section-intro { font-size:15px; }
+      .designs { grid-template-columns:1fr; gap:11px; } .design:last-child { grid-column:auto; }
+      .design-copy { padding:20px 21px 24px; } .custom-panel { padding:25px; } .custom-panel h3 { margin-top:28px; }
+      .custom-panel--app { min-height:410px; } .app-frame { width:min(100%,300px); }
+      .foundation { padding:31px 22px; border-radius:17px; } .foundation-grid { gap:9px; margin-top:25px; } .foundation-card { padding:23px; }
+      .close { gap:25px; margin-block:55px; padding:28px 22px; } .close h2 { font-size:38px; } .close-actions .button { width:100%; }
+      .footer-main { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 12px; padding:38px 0; } .footer-brand-block { padding:0 0 9px; }
+      .footer-brand { font-size:20px; } .footer-brand img { width:45px; height:45px; } .footer-tagline { margin-top:13px; font-size:11px; }
+      .footer-group { min-height:120px; padding-left:14px; } .footer-group h2 { font-size:10px; } .footer-group a { font-size:13px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:16px; padding:20px 0 28px; font-size:10px; }
+    }
+    @media (max-width:370px) { .hero-actions .button { width:100%; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page" id="top">
+    <header class="header">
+      <div class="header-inner shell">
+        <a class="brand" href="index.html" aria-label="TriPylon home"><img src="assets/brand/logo.svg" width="43" height="43" alt="" aria-hidden="true"><span>TriPylon</span></a>
+        <nav class="nav" aria-label="Main navigation"><a href="index.html">Touch</a><a href="business.html">Business</a><a href="whitelabel.html" aria-current="page">White Label</a></nav>
+        <div class="header-actions">
+          <a class="button button--small" href="#designs">Explore designs</a>
+          <details class="mobile-menu">
+            <summary aria-label="Open navigation menu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary>
+            <nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">TriPylon Touch</a><a href="business.html">For business</a><a href="whitelabel.html" aria-current="page">White Label</a><a href="#designs">Design concepts</a><a href="#foundation">Security foundation</a></nav>
+          </details>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="shell">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">TriPylon / White Label</p>
+            <h1 id="hero-title">Your brand.<br>Our security foundation.</h1>
+            <p class="hero-intro">Create a hardware wallet that feels unmistakably yours. TriPylon can tailor the enclosure and wallet application to your brand while retaining the Nucleo OS foundation inside.</p>
+            <div class="hero-actions"><a class="button" href="#designs">Explore the possibilities</a><a class="button button--light" href="#foundation">Inside every wallet</a></div>
+            <p class="hero-note">Custom hardware / Tailored app / TriPylon inside</p>
+          </div>
+          <div class="hero-visual"><img src="assets/images/whitelabel-graphite.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Concept render of a compact graphite metal White Label hardware wallet with a USB-C port"><span class="hero-visual-label">Concept design / 01</span></div>
+        </section>
+        <div class="strip" aria-label="White Label capabilities">
+          <div class="strip-item"><span>01</span><strong>Custom enclosure design</strong></div>
+          <div class="strip-item"><span>02</span><strong>Branded wallet application</strong></div>
+          <div class="strip-item"><span>03</span><strong>TriPylon security inside</strong></div>
+        </div>
+        <section class="section" id="designs" aria-labelledby="designs-title">
+          <div class="section-lead"><div><p class="eyebrow">Hardware that fits your brand</p><h2 id="designs-title">One secure core. Many possible forms.</h2></div><p class="section-intro">From materials and finishes to details of the enclosure, the physical wallet can be designed around a client's identity and product goals.</p></div>
+          <div class="designs">
+            <article class="design"><div class="design-image"><img src="assets/images/whitelabel-graphite.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Graphite metal enclosure concept for a White Label hardware wallet"></div><div class="design-copy"><small>Concept / 01</small><h3>Graphite metal</h3><p>A restrained, precision-finished direction for a professional product line.</p></div></article>
+            <article class="design"><div class="design-image"><img src="assets/images/whitelabel-ivory.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Light ivory enclosure concept for a White Label hardware wallet"></div><div class="design-copy"><small>Concept / 02</small><h3>Ivory minimal</h3><p>A quiet, approachable exterior with a subtle indicator and soft finish.</p></div></article>
+            <article class="design"><div class="design-image"><img src="assets/images/whitelabel-smoke.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Smoky translucent enclosure concept for a White Label hardware wallet"></div><div class="design-copy"><small>Concept / 03</small><h3>Smoke translucent</h3><p>A technical expression that makes the hardware feel visible and distinctive.</p></div></article>
+          </div>
+          <p class="concept-note">Illustrative design concepts only. Final enclosure, materials and finishes are defined with each client.</p>
+        </section>
+        <section class="section" id="app" aria-labelledby="app-title">
+          <div class="section-lead"><div><p class="eyebrow">Beyond the device</p><h2 id="app-title">An app experience that feels like yours.</h2></div><p class="section-intro">The companion wallet application can also be adapted to the client's brand, giving hardware and software a cohesive identity.</p></div>
+          <div class="custom">
+            <div class="custom-panel"><p class="eyebrow">Branded wallet experience</p><h3>Your identity, from first touch to daily use.</h3><p>Visual language, interface details and onboarding can be tailored for your audience while the wallet remains connected to TriPylon's underlying technology.</p><ul class="custom-list"><li>Brand colors and visual identity</li><li>Interface and content adaptation</li><li>Consistent device-to-app experience</li></ul></div>
+            <div class="custom-panel custom-panel--app" aria-label="Illustrative wallet application interface"><div class="app-frame" aria-hidden="true"><div class="app-top"><span class="app-mark">YOUR BRAND</span><span>◦ ◦ ◦</span></div><div class="app-balance"><small>Your wallet</small><strong>Assets, clearly in view</strong></div><div class="app-actions"><span>Send</span><span>Receive</span><span>Accounts</span></div><div class="app-row">Account overview</div><div class="app-row">Recent activity</div><div class="app-row">Security settings</div></div></div>
+          </div>
+        </section>
+        <section class="section foundation" id="foundation" aria-labelledby="foundation-title">
+          <div class="section-lead"><div><p class="eyebrow">The foundation stays TriPylon</p><h2 id="foundation-title">Different outside. TriPylon inside.</h2></div><p class="section-intro">White Label changes the product experience, not the underlying security foundation. Every design is built around Nucleo OS and TriPylon's protection architecture.</p></div>
+          <div class="foundation-grid">
+            <article class="foundation-card"><span>01 / OPERATING SYSTEM</span><h3>Nucleo OS</h3><p>The same purpose-built operating-system foundation remains inside the device, independent of the exterior design.</p></article>
+            <article class="foundation-card"><span>02 / SECURITY</span><h3>Protection by design</h3><p>Client-specific styling is paired with the high level of security expected from TriPylon hardware wallets.</p></article>
+            <article class="foundation-card"><span>03 / AUTHENTICITY</span><h3>Unique device key</h3><p>A unique key enables verification that the hardware is a genuine TriPylon device, even when the outside carries another brand.</p></article>
+          </div>
+        </section>
+        <section class="close" aria-labelledby="close-title"><div><h2 id="close-title">Make secure self-custody your own.</h2><p>Explore TriPylon's wider business platform or see the personal wallet that shares its foundation.</p></div><div class="close-actions"><a class="button" href="business.html">For business</a><a class="button button--light" href="index.html">TriPylon Touch</a></div></section>
+      </div>
+    </main>
+    <footer class="footer"><div class="shell"><div class="footer-main">
+      <div class="footer-brand-block"><a class="footer-brand" href="index.html" aria-label="TriPylon home"><img src="assets/brand/logo-white.svg" width="54" height="54" alt="" aria-hidden="true" loading="lazy"><span>TriPylon</span></a><p class="footer-tagline">True offline security.<br>For a more open world.</p></div>
+      <nav class="footer-group" aria-label="Products"><h2>Product</h2><a href="index.html">TriPylon Touch</a><a href="business.html">For business</a><a href="whitelabel.html" aria-current="page">White Label</a></nav>
+      <nav class="footer-group" aria-label="Explore"><h2>Explore</h2><a href="#designs">Design concepts</a><a href="#app">Wallet app</a><a href="#foundation">Nucleo OS &amp; security</a></nav>
+      <nav class="footer-group" aria-label="Resources"><h2>Resources</h2><a href="https://docs.tripylon.io/" target="_blank" rel="noopener noreferrer">Documentation ↗</a><a href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+    </div><div class="footer-bottom"><span>© 2026 TriPylon. All rights reserved.</span><div class="footer-bottom-links"><a href="business.html">Business platform ↗</a><span aria-label="Page language: English">EN</span></div></div></div></footer>
+  </div>
+</body>
+</html>
