@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f6f3">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>TriPylon Touch — Your first hardware wallet for €15</title>
+  <meta name="description" content="Meet TriPylon Touch: a €15 entry-level hardware wallet with Nucleo OS, a sealed foil pouch, USB-C cable and USB-A adapter, and support for major desktop, mobile and blockchain platforms.">
+  <link rel="canonical" href="https://tripylon.io/touch">
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="TriPylon">
+  <meta property="og:title" content="TriPylon Touch — A secure first step for €15">
+  <meta property="og:description" content="An accessible, full-featured hardware wallet with Nucleo OS, broad device compatibility and support for major networks.">
+  <meta property="og:url" content="https://tripylon.io/touch">
+  <meta property="og:image" content="https://tripylon.io/assets/images/hero-device.webp">
+  <meta property="og:image:alt" content="Concept visualization of the TriPylon Touch hardware wallet">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TriPylon Touch — A secure first step for €15">
+  <meta name="twitter:description" content="A complete hardware wallet designed to make a safer first step into crypto accessible.">
+  <meta name="twitter:image" content="https://tripylon.io/assets/images/hero-device.webp">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/images/hero-device.webp" as="image" type="image/webp" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://tripylon.io/#organization","name":"TriPylon","url":"https://tripylon.io/","logo":"https://tripylon.io/assets/brand/logo.svg"},
+      {"@type":"WebPage","@id":"https://tripylon.io/touch#webpage","url":"https://tripylon.io/touch","name":"TriPylon Touch — Your first hardware wallet for €15","description":"An entry-level hardware wallet with Nucleo OS, broad device compatibility and support for major blockchain networks.","inLanguage":"en","publisher":{"@id":"https://tripylon.io/#organization"},"mainEntity":{"@id":"https://tripylon.io/touch#product"}},
+      {"@type":"Product","@id":"https://tripylon.io/touch#product","name":"TriPylon Touch","brand":{"@id":"https://tripylon.io/#organization"},"category":"Hardware wallet","description":"An accessible hardware wallet with Nucleo OS, offline key handling and support for desktop and mobile devices.","image":"https://tripylon.io/assets/images/hero-device.webp","offers":{"@type":"Offer","url":"https://tripylon.io/touch","price":"15.00","priceCurrency":"EUR"}}
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme:light; --ink:#111415; --paper:#f8f6f3; --muted:#626a6b; --line:#e2e0db; --teal:#8fd9d5; font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); }
+    a { color:inherit; text-decoration:none; }
+    img,svg { display:block; max-width:100%; }
+    :focus-visible { outline:3px solid #187c76; outline-offset:4px; }
+    .skip-link { position:absolute; z-index:30; top:-4rem; left:1rem; padding:.75rem 1rem; background:var(--ink); color:#fff; }
+    .skip-link:focus { top:1rem; }
+    .page { overflow:clip; }
+    .shell { width:min(100% - 72px,1380px); margin-inline:auto; }
+    .header { position:relative; z-index:10; border-bottom:1px solid var(--line); background:#fcfcfa; }
+    .header-inner { min-height:84px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .brand { display:inline-flex; align-items:center; gap:14px; width:fit-content; font-size:22px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; }
+    .brand img { width:43px; height:43px; object-fit:contain; }
+    .nav { display:flex; align-items:center; gap:clamp(22px,3vw,45px); margin-left:auto; }
+    .nav a { font-size:12px; font-weight:700; letter-spacing:.055em; text-transform:uppercase; white-space:nowrap; }
+    .nav a:hover,.mobile-nav a:hover { color:#447b79; }
+    .nav a[aria-current] { color:#447b79; }
+    .header-actions { display:flex; align-items:center; gap:14px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1px solid var(--ink); border-radius:9px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; letter-spacing:.055em; text-transform:uppercase; white-space:nowrap; transition:background-color .2s ease,transform .2s ease; }
+    .button:hover { background:#303838; transform:translateY(-2px); }
+    .button--light { background:transparent; color:var(--ink); border-color:#cbd0cd; }
+    .button--light:hover { background:#fff; }
+    .button--small { min-height:42px; padding-inline:17px; }
+    .mobile-menu { display:none; }
+    .eyebrow { margin:0; color:#4b6d6b; font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; }
+    .os-link { text-decoration-line:underline; text-decoration-style:dashed; text-decoration-thickness:1px; text-underline-offset:.18em; }
+    h1,h2,h3,p { overflow-wrap:break-word; }
+    h1,h2 { letter-spacing:-.025em; text-transform:uppercase; }
+    .hero { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:center; gap:clamp(34px,5vw,78px); min-height:620px; padding-block:55px 70px; }
+    .hero-copy { padding-left:28px; }
+    .hero h1 { max-width:710px; margin:23px 0 23px; font-size:clamp(47px,5.2vw,77px); line-height:1.02; }
+    .hero-intro { max-width:52ch; margin:0; color:var(--muted); font-size:clamp(17px,1.4vw,20px); line-height:1.58; }
+    .price-row { display:flex; align-items:baseline; flex-wrap:wrap; gap:11px; margin-top:31px; }
+    .price-row strong { font-size:clamp(46px,4.2vw,65px); line-height:1; letter-spacing:-.045em; }
+    .price-row span { color:#5d6765; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:11px; margin-top:27px; }
+    .hero-note { margin:30px 0 0; color:#65716d; font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .hero-visual { position:relative; overflow:hidden; border:1px solid #e7e1da; border-radius:22px; background:#ede8e1; }
+    .hero-visual img { width:100%; height:clamp(430px,43vw,620px); object-fit:cover; }
+    .visual-caption { position:absolute; right:15px; bottom:15px; padding:10px 13px; border-radius:999px; background:rgba(255,255,255,.82); color:#4f5553; font-size:10px; font-weight:700; letter-spacing:.08em; backdrop-filter:blur(8px); }
+    .strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-block:1px solid var(--line); }
+    .strip-item { display:flex; align-items:center; gap:17px; min-height:88px; padding:18px 26px; }
+    .strip-item + .strip-item { border-left:1px solid var(--line); }
+    .strip-item span { color:#66aaa4; font-size:12px; font-weight:700; }
+    .strip-item strong { font-size:14px; }
+    .section { padding-block:100px; scroll-margin-top:24px; }
+    .section-lead { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.75fr); align-items:end; gap:40px; margin-bottom:36px; }
+    .section h2 { max-width:880px; margin:15px 0 0; font-size:clamp(39px,4.65vw,68px); line-height:1.04; }
+    .section-intro { max-width:55ch; margin:0; color:var(--muted); font-size:17px; line-height:1.58; }
+    .value-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .value { min-height:230px; padding:28px; border:1px solid var(--line); border-radius:17px; background:#fff; }
+    .value small { display:block; margin-bottom:45px; color:#588f89; font-size:11px; font-weight:700; letter-spacing:.15em; }
+    .value h3 { margin:0 0 11px; font-size:clamp(21px,2.3vw,28px); line-height:1.14; letter-spacing:-.01em; }
+    .value p { max-width:43ch; margin:0; color:var(--muted); font-size:14px; line-height:1.6; }
+    .kit { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(28px,4vw,62px); align-items:center; }
+    .kit-image { overflow:hidden; border:1px solid #e8e1dc; border-radius:20px; background:#e9e1d9; }
+    .kit-image img { width:100%; height:clamp(420px,42vw,600px); object-fit:cover; }
+    .kit-copy h2 { margin:16px 0 22px; font-size:clamp(40px,4.6vw,66px); line-height:1.04; }
+    .kit-copy > p:not(.eyebrow) { max-width:52ch; margin:0; color:var(--muted); font-size:17px; line-height:1.6; }
+    .kit-list { display:grid; gap:0; margin:33px 0 0; padding:0; list-style:none; }
+    .kit-list li { display:flex; align-items:center; gap:15px; padding:16px 0; border-top:1px solid var(--line); font-size:15px; font-weight:700; }
+    .kit-list li span { color:#5f9e96; font-size:12px; letter-spacing:.08em; }
+    .kit-note { display:block; margin-top:18px; color:#717976; font-size:12px; line-height:1.5; }
+    .security { padding:clamp(32px,5vw,68px); border-radius:24px; background:#171d1d; color:#f7f9f8; }
+    .security .eyebrow { color:#9cddd8; }
+    .security .section-intro { color:#b9c4c1; }
+    .security-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:35px; }
+    .security-card { min-height:230px; padding:26px; border:1px solid #3c4847; border-radius:14px; background:#202929; }
+    .security-card small { display:block; margin-bottom:51px; color:#9bdad4; font-size:11px; font-weight:700; letter-spacing:.15em; }
+    .security-card h3 { margin:0 0 11px; font-size:23px; }
+    .security-card p { margin:0; color:#bac7c4; font-size:14px; line-height:1.6; }
+    .compat { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:17px; }
+    .compat-panel { min-height:395px; padding:clamp(28px,4vw,50px); border:1px solid var(--line); border-radius:20px; background:#fff; }
+    .compat-panel h3 { margin:35px 0 12px; font-size:clamp(29px,3vw,42px); line-height:1.1; letter-spacing:-.025em; }
+    .compat-panel p:not(.eyebrow) { max-width:43ch; margin:0; color:var(--muted); font-size:15px; line-height:1.6; }
+    .tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:30px; }
+    .tags span { padding:10px 13px; border:1px solid #d6ddda; border-radius:8px; background:#f8faf8; font-size:13px; font-weight:700; }
+    .compat-visual { overflow:hidden; min-height:395px; border:1px solid #e8e1dc; border-radius:20px; background:#ede7df; }
+    .compat-visual img { width:100%; height:100%; min-height:395px; object-fit:cover; }
+    .networks { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .network { min-height:126px; display:flex; flex-direction:column; justify-content:space-between; padding:22px; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    .network small { color:#5f9d96; font-size:10px; font-weight:700; letter-spacing:.15em; }
+    .network strong { font-size:clamp(19px,2.1vw,26px); letter-spacing:-.015em; }
+    .network-note { margin:19px 0 0; color:#68716d; font-size:13px; line-height:1.55; }
+    .close { display:grid; grid-template-columns:1fr auto; align-items:center; gap:28px; margin-block:90px 80px; padding:40px 45px; border-radius:18px; background:#e8efec; }
+    .close h2 { max-width:710px; margin:0 0 12px; font-size:clamp(34px,3.6vw,51px); line-height:1.07; text-transform:uppercase; }
+    .close p { max-width:62ch; margin:0; color:#52615e; font-size:15px; line-height:1.55; }
+    .close-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .footer { background:#151515; color:#f8f7f5; }
+    .footer-main { display:grid; grid-template-columns:minmax(240px,1.6fr) repeat(3,minmax(130px,1fr)); gap:clamp(22px,3.5vw,60px); padding:50px 30px 44px; }
+    .footer-brand { display:inline-flex; align-items:center; gap:14px; font-size:24px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; white-space:nowrap; }
+    .footer-brand img { width:54px; height:54px; }
+    .footer-tagline { margin:18px 0 0; color:#a7a7a7; font-size:12px; line-height:1.6; letter-spacing:.13em; text-transform:uppercase; }
+    .footer-group { display:flex; flex-direction:column; align-items:flex-start; gap:13px; padding-left:clamp(16px,2.5vw,35px); border-left:1px solid #343434; }
+    .footer-group h2 { margin:4px 0 7px; color:#a7a7a7; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .footer-group a { color:#ebebeb; font-size:14px; line-height:1.4; }
+    .footer-group a:hover,.footer-bottom a:hover { color:#a9e3e5; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:23px 30px 28px; border-top:1px solid #333; color:#a7a7a7; font-size:11px; letter-spacing:.09em; text-transform:uppercase; }
+    .footer-bottom-links { display:flex; align-items:center; gap:26px; }
+    .footer-bottom a { color:#e5e5e5; }
+    @media (max-width:1100px) { .shell { width:min(100% - 48px,1380px); } .header-inner { gap:18px; } .nav { gap:20px; } .hero-copy { padding-left:8px; } .strip-item { padding-inline:18px; } }
+    @media (max-width:820px) {
+      .header-inner { min-height:72px; } .nav,.header-actions > .button { display:none; }
+      .mobile-menu { position:relative; display:block; }
+      .mobile-menu summary { display:grid; place-items:center; width:42px; height:42px; cursor:pointer; list-style:none; border:1px solid var(--line); border-radius:9px; }
+      .mobile-menu summary::-webkit-details-marker { display:none; } .mobile-menu summary svg { width:22px; height:22px; }
+      .mobile-nav { position:absolute; top:calc(100% + 12px); right:0; display:grid; gap:2px; width:min(260px,calc(100vw - 32px)); padding:10px; border:1px solid var(--line); border-radius:12px; background:#fff; box-shadow:0 12px 36px rgba(0,0,0,.09); }
+      .mobile-nav a { padding:13px 12px; font-size:13px; font-weight:700; text-transform:uppercase; }
+      .hero { grid-template-columns:1fr; gap:30px; min-height:0; padding-block:50px 62px; } .hero-copy { padding-left:0; } .hero-visual img { height:min(70vw,530px); }
+      .strip { grid-template-columns:1fr; } .strip-item { min-height:67px; padding:14px 12px; } .strip-item + .strip-item { border-left:0; border-top:1px solid var(--line); }
+      .section { padding-block:75px; } .section-lead { display:block; } .section-intro { margin-top:20px; }
+      .value-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .value:last-child { grid-column:1/-1; }
+      .kit { grid-template-columns:1fr; } .kit-image img { height:min(70vw,530px); }
+      .security-grid { grid-template-columns:1fr; } .security-card { min-height:0; } .security-card small { margin-bottom:25px; }
+      .compat { grid-template-columns:1fr; } .compat-panel { min-height:0; } .compat-visual { min-height:340px; } .compat-visual img { min-height:340px; max-height:440px; }
+      .close { grid-template-columns:1fr; } .footer-main { grid-template-columns:repeat(3,minmax(0,1fr)); padding-inline:8px; } .footer-brand-block { grid-column:1/-1; padding-bottom:20px; } .footer-bottom { padding-inline:8px; }
+    }
+    @media (max-width:620px) {
+      .shell { width:min(100% - 32px,1380px); } .brand { gap:9px; font-size:17px; letter-spacing:.12em; } .brand img { width:34px; height:34px; }
+      .hero { gap:25px; padding-block:46px 50px; } .hero h1 { font-size:clamp(42px,11vw,62px); } .hero-intro { font-size:16px; } .price-row { margin-top:26px; }
+      .hero-actions .button { min-height:46px; padding-inline:16px; font-size:11px; } .hero-note { margin-top:26px; }
+      .hero-visual { border-radius:16px; } .hero-visual img { height:67vw; min-height:270px; } .visual-caption { right:9px; bottom:9px; padding:8px 10px; font-size:8px; }
+      .section { padding-block:58px; } .section h2 { font-size:clamp(37px,10vw,55px); } .section-intro { font-size:15px; }
+      .value-grid { grid-template-columns:1fr; gap:11px; } .value:last-child { grid-column:auto; } .value { min-height:0; padding:23px; } .value small { margin-bottom:24px; }
+      .kit-image { border-radius:16px; } .kit-image img { height:72vw; min-height:285px; } .kit-copy h2 { font-size:clamp(39px,10vw,55px); }
+      .security { padding:30px 22px; border-radius:17px; } .security-grid { gap:9px; margin-top:25px; } .security-card { padding:22px; }
+      .compat { gap:11px; } .compat-panel { padding:26px; } .compat-panel h3 { margin-top:29px; } .tags { gap:7px; } .tags span { padding:9px 11px; font-size:12px; }
+      .compat-visual { min-height:290px; border-radius:16px; } .compat-visual img { min-height:290px; max-height:360px; }
+      .networks { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; } .network { min-height:110px; padding:17px; } .network strong { font-size:19px; }
+      .close { gap:25px; margin-block:55px; padding:28px 22px; } .close h2 { font-size:38px; } .close-actions .button { width:100%; }
+      .footer-main { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 12px; padding:38px 0; } .footer-brand-block { padding:0 0 9px; }
+      .footer-brand { font-size:20px; } .footer-brand img { width:45px; height:45px; } .footer-tagline { margin-top:13px; font-size:11px; }
+      .footer-group { min-height:120px; padding-left:14px; } .footer-group h2 { font-size:10px; } .footer-group a { font-size:13px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; gap:16px; padding:20px 0 28px; font-size:10px; }
+    }
+    @media (max-width:370px) { .hero-actions .button { width:100%; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="header"><div class="header-inner shell">
+      <a class="brand" href="index.html" aria-label="TriPylon home"><img src="assets/brand/logo.svg" width="43" height="43" alt="" aria-hidden="true"><span>TriPylon</span></a>
+      <nav class="nav" aria-label="Main navigation"><a href="touch.html" aria-current="page">Touch</a><a href="business.html">Business</a><a href="whitelabel.html">White Label</a><a href="nucleo.html">Nucleo OS</a></nav>
+      <div class="header-actions"><a class="button button--small" href="https://forms.gle/fDaM64pFT87UHs8m9" target="_blank" rel="noopener noreferrer">Join waitlist</a><details class="mobile-menu"><summary aria-label="Open navigation menu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="touch.html" aria-current="page">TriPylon Touch</a><a href="#kit">In the pouch</a><a href="#compatibility">Compatibility</a><a href="business.html">For business</a><a href="whitelabel.html">White Label</a><a href="nucleo.html">Nucleo OS</a></nav></details></div>
+    </div></header>
+    <main id="main"><div class="shell">
+      <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">TriPylon Touch</p><h1 id="hero-title">Your first secure step into crypto.</h1><p class="hero-intro">An accessible hardware wallet for anyone who wants to explore crypto with private keys kept offline. Entry-level in price, fully capable by design.</p><div class="price-row" aria-label="Price: 15 euros"><strong>€15</strong><span>Accessible self-custody</span></div><div class="hero-actions"><a class="button" href="https://forms.gle/fDaM64pFT87UHs8m9" target="_blank" rel="noopener noreferrer">Join waitlist</a><a class="button button--light" href="#inside">See what is inside</a></div><p class="hero-note">Compact / Wired / Nucleo OS</p></div><div class="hero-visual"><img src="assets/images/hero-device.webp" width="1484" height="1060" alt="Concept visualization of a white TriPylon Touch hardware wallet with USB-C port and cyan light" fetchpriority="high" decoding="async"><span class="visual-caption">Concept visualization based on current prototype</span></div></section>
+      <div class="strip" aria-label="Touch highlights"><div class="strip-item"><span>01</span><strong>A simple place to start</strong></div><div class="strip-item"><span>02</span><strong>Real hardware wallet protection</strong></div><div class="strip-item"><span>03</span><strong>Made for devices you use</strong></div></div>
+      <section class="section" id="start" aria-labelledby="start-title"><div class="section-lead"><div><p class="eyebrow">Made for a first step</p><h2 id="start-title">Start small. Keep control.</h2></div><p class="section-intro">Touch is an entry-level device for people trying self-custody for the first time. The aim is to make a safer way to explore crypto feel approachable, without turning the wallet into a disposable demo.</p></div><div class="value-grid"><article class="value"><small>01 / ACCESSIBLE</small><h3>€15 price point</h3><p>A more approachable starting point for a dedicated hardware wallet.</p></article><article class="value"><small>02 / SIMPLE</small><h3>Connect and explore</h3><p>Get from the sealed pouch to your first wallet experience with a short setup path.</p></article><article class="value"><small>03 / YOUR KEYS</small><h3>Offline by design</h3><p>Private keys stay on the device while the connected computer or phone handles the wider experience.</p></article></div></section>
+      <section class="section kit" id="kit" aria-labelledby="kit-title"><div class="kit-image"><img src="assets/images/step-unseal.webp" width="1316" height="1195" loading="lazy" decoding="async" alt="Concept visualization of the black TriPylon branded foil pouch"></div><div class="kit-copy"><p class="eyebrow">What comes with Touch</p><h2 id="kit-title">Unseal. Connect. Begin.</h2><p>Touch is distributed in a branded, sealed foil pouch rather than a retail box. Inside is the essentials-only kit for getting started.</p><ul class="kit-list"><li><span>01</span>TriPylon Touch device</li><li><span>02</span>USB-C cable</li><li><span>03</span>USB-A adapter</li><li><span>04</span>Basic quick-start guide</li></ul><span class="kit-note">Image is a concept visualization; final packaging details may vary.</span></div></section>
+      <section class="section security" id="inside" aria-labelledby="inside-title"><div class="section-lead"><div><p class="eyebrow">Full capability, accessible price</p><h2 id="inside-title">Entry-level does not mean stripped down.</h2></div><p class="section-intro">Touch runs the full <a class="os-link" href="nucleo.html">Nucleo OS</a> foundation and includes the protected functions of a dedicated TriPylon wallet.</p></div><div class="security-grid"><article class="security-card"><small>01 / OPERATING SYSTEM</small><h3><a class="os-link" href="nucleo.html">Nucleo OS</a> onboard</h3><p>The same modular wallet operating-system architecture used across TriPylon devices.</p></article><article class="security-card"><small>02 / KEY HANDLING</small><h3>Keys stay offline</h3><p>The device keeps sensitive key operations separate from the connected host.</p></article><article class="security-card"><small>03 / HARDWARE SAFEGUARDS</small><h3>Protected foundation</h3><p>First-generation Touch combines signed-firmware startup, encrypted storage and locked debug access.</p></article></div></section>
+      <section class="section" id="compatibility" aria-labelledby="compatibility-title"><div class="section-lead"><div><p class="eyebrow">Your everyday devices</p><h2 id="compatibility-title">Connect where you already are.</h2></div><p class="section-intro">Use Touch with desktop and mobile platforms. The wallet stays a separate physical device, while your computer or phone provides the interface.</p></div><div class="compat"><div class="compat-panel"><p class="eyebrow">Supported platforms</p><h3>Desktop and mobile.</h3><p>Touch is designed for the systems people already use to manage their digital assets.</p><div class="tags" aria-label="Supported operating systems"><span>Windows</span><span>Linux</span><span>macOS</span><span>Android</span><span>iOS</span></div></div><div class="compat-visual"><img src="assets/images/step-connect.webp" width="1484" height="1060" loading="lazy" decoding="async" alt="Concept scene of TriPylon Touch connected by USB to a laptop, with a phone nearby"></div></div></section>
+      <section class="section" id="networks" aria-labelledby="networks-title"><div class="section-lead"><div><p class="eyebrow">Supported networks</p><h2 id="networks-title">A wallet for the networks you want to try.</h2></div><p class="section-intro">Start with widely used blockchain networks, all through the same physical wallet.</p></div><div class="networks" aria-label="Supported blockchain networks"><div class="network"><small>01 / EVM</small><strong>Ethereum</strong></div><div class="network"><small>02 / EVM</small><strong>Binance Smart Chain</strong></div><div class="network"><small>03 / EVM</small><strong>Polygon</strong></div><div class="network"><small>04 / EVM</small><strong>Base</strong></div><div class="network"><small>05 / NETWORK</small><strong>Tron</strong></div><div class="network"><small>06 / NETWORK</small><strong>Bitcoin</strong></div></div><p class="network-note">This list can expand as platform support develops.</p></section>
+      <section class="close" aria-labelledby="close-title"><div><h2 id="close-title">Ready for a more secure start?</h2><p>Join the waitlist for TriPylon Touch or open the wallet application to explore the experience.</p></div><div class="close-actions"><a class="button" href="https://forms.gle/fDaM64pFT87UHs8m9" target="_blank" rel="noopener noreferrer">Join waitlist</a><a class="button button--light" href="https://wallet.tripylon.io/" target="_blank" rel="noopener noreferrer">To app ↗</a></div></section>
+    </div></main>
+    <footer class="footer"><div class="shell"><div class="footer-main"><div class="footer-brand-block"><a class="footer-brand" href="index.html" aria-label="TriPylon home"><img src="assets/brand/logo-white.svg" width="54" height="54" alt="" aria-hidden="true" loading="lazy"><span>TriPylon</span></a><p class="footer-tagline">True offline security.<br>For a more open world.</p></div><nav class="footer-group" aria-label="Products"><h2>Product</h2><a href="touch.html" aria-current="page">TriPylon Touch</a><a href="business.html">For business</a><a href="whitelabel.html">White Label</a></nav><nav class="footer-group" aria-label="Explore Touch"><h2>Explore</h2><a href="#kit">In the pouch</a><a href="#compatibility">Compatibility</a><a href="#networks">Networks</a><a class="os-link" href="nucleo.html">Nucleo OS</a></nav><nav class="footer-group" aria-label="Resources"><h2>Resources</h2><a href="https://wallet.tripylon.io/" target="_blank" rel="noopener noreferrer">Wallet app ↗</a><a href="https://github.com/tripylon" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div><div class="footer-bottom"><span>© 2026 TriPylon. All rights reserved.</span><div class="footer-bottom-links"><a href="index.html">Home ↗</a><span aria-label="Page language: English">EN</span></div></div></div></footer>
+  </div>
+</body>
+</html>
